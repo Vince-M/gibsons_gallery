@@ -1,0 +1,70 @@
+@use '../util' as u;
+
+.artists {
+
+  &__feature {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 0;
+    width: 100%;
+
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    img {
+      border: 5px solid var(--darkBlue);
+      height: auto;
+      margin-bottom: 16px;
+      max-width: 100%;
+      }
+    }
+
+
+}
+
+.visit {
+  margin-bottom: u.rem(88);
+
+  @include u.breakpoint-down(small) {
+    margin-bottom: u.rem(32);
+  }
+
+  h2 {
+    line-height: 1;
+    font-weight: 700;
+    color: var(--darkBlue);
+    text-align: center;
+
+    @include u.breakpoint-down(small) {
+      line-height: 1.3;
+    }
+  }
+}
+
+.artist {
+
+  &__krista {
+    border: 5px solid var(--darkBlue);
+  }
+
+  &__head {
+    font-size: u.rem(26);
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  &__name {
+    color: var(--darkBlue);
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+  }
+}

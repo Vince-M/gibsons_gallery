@@ -1,0 +1,247 @@
+@use '../util' as u;
+
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: u.rem(24);
+
+  &__intro {
+    display: flex;
+    flex-direction: row;
+    gap: u.rem(32);
+    padding: 0;
+    margin-bottom: u.rem(60);
+
+    @include u.breakpoint-down(medium) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__col2 {
+
+    @include u.breakpoint-down(medium) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__col1,
+  &__col2 {
+    width: 100%;
+    
+    img {
+      height: auto;
+      display: flex;
+    }
+  }
+
+  
+
+  &__fullWidth {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--greenLight);
+    width: 100%;
+    height: auto;
+    margin-bottom: u.rem(80);
+
+    @include u.breakpoint-down(medium) {
+      flex-direction: column;
+      margin-bottom: u.rem(40);
+    }
+
+    &--col1 {
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: flex-end;
+      display: inline-block;
+      max-height: u.rem(700);
+      overflow: hidden;
+      height: 100%;
+      vertical-align: bottom;
+      
+
+      img {
+        height: auto;
+      }
+
+      @include u.breakpoint-down(medium) {
+        margin-bottom: u.rem(40);
+        justify-content: center;
+      }
+    }
+    
+    &--col2 {
+      align-content: center;
+      padding: 0 20px;
+
+      img {
+
+        @include u.breakpoint-down(medium) {
+          text-align: center;
+        }
+      }
+    }
+
+    &--col1,
+    &--col2 {
+      width: 100%;
+    }
+
+    img {
+      align-self: end;
+    }
+
+    &--content {
+      max-width: u.rem(480);
+
+      @include u.breakpoint-down(medium) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__brand {
+    margin-bottom: u.rem(48);
+
+    @include u.breakpoint-down(medium){
+      margin-bottom: u.rem(20);
+      margin-inline: auto;
+    }
+
+    &--logo {
+      max-width: 45%;
+
+      @include u.breakpoint-down(medium) {
+        max-width: 90%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 80px;
+
+    @include u.breakpoint-down(medium) {
+      flex-direction: column;
+    }
+
+    &--col1,
+    &--col2 {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: u.rem(40);
+      line-height: 1;
+      margin-bottom: u.rem(24);
+      margin-top: u.rem(40);
+    }
+
+    h2:not(.stainedGlassHead) {
+      margin-top: 0;
+    }
+  }
+}
+
+h1.artistName {
+  font-size: u.rem(64);
+  margin-bottom: u.rem(16);
+  line-height: .75;
+
+  @include u.breakpoint-down(small) {
+    font-size: u.rem(48);
+  }
+}
+
+h2.artistTitle {
+  color: var(--darkBlue);
+  font-size: u.rem(32);
+  font-weight: 400;
+  margin-bottom: u.rem(40);
+}
+
+.krista {
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    gap: u.rem(16);
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+
+    @include u.breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 32px;
+
+    @include u.breakpoint-down(medium) {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
+    img {
+      border: 5px solid var(--darkBlue);
+      margin-bottom: 16px;
+      height: auto;
+
+      @include u.breakpoint-down(medium) {
+        width: 100%;
+        margin: 0 auto 16px;
+      }
+    }
+
+    a {
+      font-family: var(--font-text);
+      color: var(--primaryBlue);
+      font-weight: 700;
+      font-size: u.rem(18);
+      text-decoration: none;
+      cursor: pointer;
+  
+      &:hover {
+        color: var(--darkOrange);
+        text-decoration: underline;
+      }
+    }
+  }
+} 
+
+.artLink  {
+
+  &__caption {
+    background-color: var(--white);
+    width: 100%;
+    overflow: hidden;
+
+    &--header {
+      font-family: var(--font-text);
+      font-size: u.rem(28);
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--darkBlue);
+      padding: u.rem(20);
+      margin: 0;
+    }
+
+    &--boarder {
+      border: 5px solid var(--darkBlue);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

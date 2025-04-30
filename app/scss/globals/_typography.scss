@@ -1,0 +1,61 @@
+@use '../util' as u;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	line-height: 1;
+	text-wrap: balance;
+	margin-top: 0;
+	letter-spacing: 0.055px;
+}
+
+h1 {
+	font-size: u.rem(60);
+	font-size: clamp(1.875rem, 1.02rem + 3.632vw, 3.75rem);
+	margin-block-end: u.rem(20);
+	color: var(--darkBlue);
+}
+
+h1.meetArtist {
+	font-size: u.rem(25);
+}
+
+h2 {
+	font-size: u.rem(28);
+	font-size: clamp(1.75rem, 1.331rem + 1.55vw, 2.5rem);
+	margin-block-end: u.rem(20);
+	color: var(--darkBlue);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--primaryBlue);
+}
+
+p {
+	font-size: u.rem(16);
+	line-height: 1.5;
+	margin-top: 0;
+	margin-bottom: u.rem(20);
+}
+
+strong {
+	font-weight: 700;
+}
+
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: underline;
+}

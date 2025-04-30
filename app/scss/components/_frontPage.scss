@@ -1,0 +1,86 @@
+@use '../util' as u;
+
+h1.intro__heading {
+  margin-bottom: u.rem(24);
+}
+
+.intro {
+  margin-bottom: u.rem(80);
+
+  @include u.breakpoint-down(small) {
+    margin-bottom: u.rem(32);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+    margin-bottom: u.rem(48);
+
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+ 
+
+  &__featureImgs {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+
+
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+      gap: u.rem(40);
+    }
+  }
+}
+
+
+
+.galleryPhotos {
+
+  &__twoCols {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 0 0 40px;
+
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+    }
+  }
+
+  &__fullWidth {
+    margin: 0 0 40px;
+
+    @include u.breakpoint-down(small) {
+      margin: 0 0 40px;
+    }
+
+    img {
+
+      @include u.breakpoint-down(small) {
+        left: 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        overflow: hidden;
+        position: relative;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.galleryPhoto {
+
+  &__img {
+    border: 5px solid var(--darkBlue);
+  }
+}
+
