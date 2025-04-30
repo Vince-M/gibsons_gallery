@@ -1,0 +1,44 @@
+{
+  "name": "gibsonsgallery",
+  "version": "1.0.0",
+  "description": "wordpress theme site for Gibson's Glass Art Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vince-M/gibsons_gallery.git"
+  },
+  "keywords": [
+    "gibson",
+    "gallery",
+    "glass",
+    "art"
+  ],
+  "author": "Vince Mendella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vince-M/gibsons_gallery/issues"
+  },
+  "homepage": "https://github.com/Vince-M/gibsons_gallery#readme",
+  "dependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.0.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.5.3",
+    "sass": "^1.87.0"
+  },
+
+  "overrides": {
+    "chokidar": "3.5.3",
+    "glob-parent": "6.0.2"
+  }
+}
