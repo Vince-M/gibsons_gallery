@@ -20,6 +20,13 @@ body {
 	color: var(--black);
 }
 
+main {
+
+	@include u.breakpoint(medium) {
+		
+	}
+}
+
 img {
 	display: block;
 	max-width: 100%;

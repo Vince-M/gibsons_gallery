@@ -154,6 +154,7 @@
 }
 
 .featured {
+  height: u.rem(276);
   max-height: u.rem(500);
   max-width: u.rem(560);
   overflow: hidden;
@@ -202,7 +203,8 @@
   }
 
   &__lg {
-    margin: 0 0 u.rem(48) 0;
+    // margin: 0 0 u.rem(48) 0;
+    margin: 0;
     overflow: hidden;
     width: 100%;
 
@@ -266,4 +268,9 @@
 
 .fade-in.appear {
   opacity: 1;
+}
+
+.wp-block-image .alignleft {
+  float: none;
+  margin: 0;
 }

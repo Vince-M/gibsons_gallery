@@ -5,8 +5,8 @@
   <footer id="footer" class="footer" role="contentinfo">
     <div class="wrapper footer__content">
       <div class="footer__branding">
-        <a href="index.html">
-          <img src="img/footer__branding.svg" alt="" width="175" height="95">
+        <a href="<?php echo esc_url(  home_url( '/' ) ); ?>">
+          <img src="<?php echo get_theme_file_uri() ?>/img/footer__branding.svg" alt="" width="175" height="95">
         </a>
       </div>
       <div class="footer__nav">

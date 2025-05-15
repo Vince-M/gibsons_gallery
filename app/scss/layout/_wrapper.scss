@@ -3,7 +3,7 @@
 .wrapper {
 	width: min(100% - u.rem(0), u.rem(1200));
 	margin-inline: auto;
-	padding: 0 u.rem(24);
+	padding: 0;
 	// padding-block: 60px;
 
 	@include u.breakpoint(large) {
