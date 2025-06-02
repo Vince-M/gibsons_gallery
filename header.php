@@ -38,19 +38,14 @@
     <div class="top__bar"></div>
     <div class="wrapper topnav__wrapper">
       <a href="<?php echo esc_url(  home_url( '/' ) ); ?>" class="topnav__homelink hover-fade">
-        <img src="<?php echo get_theme_file_uri() ?>/img/gibsons_gallery_header.svg" alt="Gibson's Gallery homepage" class="topnav__logo" width="340" height="78">
+        <img src="<?php echo get_theme_file_uri(); ?>/img/gibsons_gallery_header.svg" alt="Gibson's Gallery homepage" class="topnav__logo" width="340" height="78">
       </a>
       <nav class="nav">
         <span id="nav-label" hidden>Navigation</span>
         <div id="overlay" class="topnav__overlay"></div>
 
-        <button
-          id="btnOpen"
-          class="topnav__open" 
-          aria-expanded="false"
-          aria-labelledby="nav-label"
-          >
-          <img src="img/hamburger.svg" alt="" width="30" height="23" />
+        <button id="btnOpen" class="topnav__open" aria-expanded="false" aria-labelledby="nav-label">
+          <img src="<?php echo get_theme_file_uri(); ?>/img/hamburger.svg" alt="hamburger menu" width="30" height="23">
         </button>
 
         <div
@@ -107,5 +102,5 @@
 
 <a href="#main" class="visually-hidden">Skip to main content</a>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
       

@@ -1,38 +1,38 @@
 // Initialize modules
-const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const postcss = require('gulp-postcss');
-const autoprefixer = require('cssnano');
-const cssnano = require('cssnano');
-const babel = require('gulp-babel');
-const terser = require('gulp-terser');
-const browsersync = require('browser-sync').create();
+const { src, dest, watch, series } = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const babel = require("gulp-babel");
+const terser = require("gulp-terser");
+const browsersync = require("browser-sync").create();
 
 // Sass Task
 function scssTask() {
-  return src('app/scss/*.scss', { sourcemaps: true})
+  return src("app/scss/*.scss", { sourcemaps: true})
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('./', { sourcemaps: '.'}));
+    .pipe(dest("./", { sourcemaps: "."}));
 }
 
 // Javascript Task
 function jsTask() {
-  return src('app/js/script.js', { sourcemaps: true})
-  .pipe(babel({ presets: ['@babel/preset-env'] }))
+  return src("app/js/script.js", { sourcemaps: true})
+  .pipe(babel({ presets: ["@babel/preset-env"] }))
   .pipe(terser())
-  .pipe(dest('dist', { sourcemaps: '.' }));
+  .pipe(dest("dist", { sourcemaps: "." }));
 }
 
 // Browsersync
 function browserSyncServe(cb) {
   browsersync.init({
-    browser: 'firefox developer edition',
+    browser: "firefox",
     proxy: "http://gibsons-gallery.local/",
     notify: {
       styles: {
-        top: 'auto',
-        bottom: '0',
+        top: "auto",
+        bottom: "0",
       },
     },
   });
@@ -45,9 +45,9 @@ function browserSyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-  watch('*.php', browserSyncReload);
+  watch("*.php", browserSyncReload);
   watch(
-    ['app/scss/**/*.scss', 'app/**/*.js'],
+    ["app/scss/**/*.scss", "app/**/*.js"],
     series(scssTask, jsTask, browserSyncReload)
   );
 }

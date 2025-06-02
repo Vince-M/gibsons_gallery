@@ -46,7 +46,7 @@
 
 .artist {
 
-  &__krista {
+  &__profile {
     border: 5px solid var(--darkBlue);
   }
 
@@ -60,6 +60,10 @@
     color: var(--darkBlue);
   }
 
+  &__bio {
+    margin-bottom: u.rem(60);
+  }
+
   &__gallery {
     display: flex;
     flex-direction: row;
@@ -67,4 +71,34 @@
     margin-inline: auto;
     margin-bottom: 3rem;
   }
+}
+
+.artwork {
+  margin-bottom: 10px;
+  max-height: 31.25rem;
+  max-width: 35rem;
+  overflow: hidden;
+
+  &__info {
+    color: var(--primaryBlue);
+    cursor: pointer;
+    font-family: var(--font-text);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: u.rem(24);
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wp-block-media-text__media {
+  border: 5px solid var(--darkBlue);
+}
+
+.wp-block-media-text.has-media-on-the-right {
+  grid-template-columns: 1fr 50%;
+  gap: 2rem;
 }

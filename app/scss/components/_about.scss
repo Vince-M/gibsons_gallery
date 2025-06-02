@@ -12,8 +12,8 @@
     padding: 0;
     margin-bottom: u.rem(60);
 
-    @include u.breakpoint-down(medium) {
-      flex-direction: column;
+    @include u.breakpoint-down(small) {
+      flex-direction: column-reverse;
       padding: 0;
     }
   }
@@ -21,8 +21,8 @@
   &__col2 {
 
     @include u.breakpoint-down(medium) {
-      display: flex;
-      justify-content: center;
+      // display: flex;
+      // justify-content: center;
     }
   }
 

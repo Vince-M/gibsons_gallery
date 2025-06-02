@@ -5,8 +5,7 @@ h1.intro__heading {
 }
 
 .intro {
-  // margin-bottom: u.rem(80);
-  margin-bottom: 0;
+  margin-bottom: u.rem(80);
 
   @include u.breakpoint-down(small) {
     margin-bottom: u.rem(32);
@@ -85,3 +84,6 @@ h1.intro__heading {
   }
 }
 
+:where(.wp-block-columns) {
+  margin-bottom: u.rem(20);
+}

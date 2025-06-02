@@ -6,7 +6,7 @@
 	padding: 0;
 	// padding-block: 60px;
 
-	@include u.breakpoint(large) {
-		// padding-block: 60px;
+	@include u.breakpoint-down(medium) {
+		padding: 0 u.rem(16);
 	}
 }
