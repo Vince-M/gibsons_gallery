@@ -1,10 +1,9 @@
 <?php
 
 function gibsons_files() {
-  wp_enqueue_script('gibsons_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', false);
-  wp_enqueue_script('bodyScrollLock', get_stylesheet_directory_uri() . '/dist/bodyScrollLock.min.js', NULL, '1.0', false);
+  wp_enqueue_script('gibsons_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', true);
+  wp_enqueue_script('bodyScrollLock', get_stylesheet_directory_uri() . '/dist/bodyScrollLock.min.js', NULL, '1.0', true);
   wp_enqueue_style( 'gibsons_main_style', get_theme_file_uri('main.css') );
-  wp_enqueue_style( 'gibsons_style', get_theme_file_uri('style.css') );
 }
 
 add_action('wp_enqueue_scripts', 'gibsons_files');
@@ -35,6 +34,9 @@ function gibsons_gallery_features() {
 add_action( 'after_setup_theme', 'gibsons_gallery_features' );
 
 
+
+
+// this has to be the last function in the funtions.php file
 function defer_parsing_of_js( $url ) {
   if ( is_user_logged_in() ) return $url; //don't break WP Admin
   if ( FALSE === strpos( $url, '.js' ) ) return $url;
