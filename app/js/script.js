@@ -1,10 +1,16 @@
 console.log('Hello');
 
+const main = document.querySelector('#main');
+const body = document.querySelector('body');
+const footer = document.querySelector('#footer');
 const btnOpen = document.querySelector('#btnOpen');
 const btnClose = document.querySelector('#btnClose');
 const menuTopNav = document.querySelector('#menuTopNav');
 const overlay = document.querySelector('#overlay');
 const breakpoint = window.matchMedia('(width < 43.75em)');
+const menu = document.querySelector(".menu");
+const nav__items = document.querySelectorAll(".nav__item");
+const btnHamburger = document.querySelector('#btnHamburger');
 const faders = document.querySelectorAll(".fade-in");
 
 const setupTopNav = () => {
@@ -18,7 +24,7 @@ const setupTopNav = () => {
   }
 };
 
-setupTopNav();
+// setupTopNav();
 
 btnOpen.addEventListener('click', openMobileMenu);
 btnClose.addEventListener('click', closeMobileMenu);
@@ -59,26 +65,26 @@ function closeMobileMenu() {
 
 // Intersection Observer
 
-const appearOptions = {
-  threshold: 1,
-  rootMargin: "0px 0px 100px 0px"
-};
+// const appearOptions = {
+//   threshold: 1,
+//   rootMargin: "0px 0px 100px 0px"
+// };
 
-const appearOnScroll = new IntersectionObserver (function(
-    entries, 
-    appearOnScroll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, 
-appearOptions);
+// const appearOnScroll = new IntersectionObserver (function(
+//     entries, 
+//     appearOnScroll
+// ) {
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) {
+//       return;
+//     } else {
+//       entry.target.classList.add('appear');
+//       appearOnScroll.unobserve(entry.target);
+//     }
+//   });
+// }, 
+// appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+// faders.forEach(fader => {
+//   appearOnScroll.observe(fader);
+// });
