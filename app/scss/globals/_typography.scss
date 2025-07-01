@@ -19,6 +19,7 @@ h1 {
 	font-size: clamp(1.875rem, 1.02rem + 3.632vw, 3.75rem);
 	margin-block-end: u.rem(20);
 	color: var(--darkBlue);
+	margin-bottom: 0;
 }
 
 h1.meetArtist {
@@ -28,7 +29,7 @@ h1.meetArtist {
 h2 {
 	font-size: u.rem(28);
 	font-size: clamp(1.75rem, 1.331rem + 1.55vw, 2.5rem);
-	margin-block-end: u.rem(20);
+	margin-block-end: u.rem(8);
 	color: var(--darkBlue);
 }
 
@@ -44,11 +45,12 @@ p {
 	font-size: u.rem(16);
 	line-height: 1.5;
 	margin-top: 0;
-	margin-bottom: u.rem(20);
+	margin-bottom: u.rem(24);
 }
 
 strong {
 	font-weight: 700;
+	color: var(--darkBlue);
 }
 
 a:visited,

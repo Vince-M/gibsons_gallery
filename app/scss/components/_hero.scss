@@ -30,7 +30,7 @@
 
 .hero-img {
   width: 100vw;
-  height: auto;
+  height: u.rem(375);
   min-height: u.rem(300); // 300px;
   border-bottom: 5px solid var(--darkBlue);
   overflow: hidden;
@@ -38,10 +38,29 @@
   display: block;
   margin: 0 auto u.rem(80);
   top: 0;
-  border-bottom: u.rem(24) solid var(--primaryGreen);
+  border-bottom: u.rem(12) solid var(--primaryGreen);
 
   @media screen and (max-width: 639px) {
     min-height: auto;
+  }
+
+  &__index {
+    width: 100vw;
+    height: auto;
+    // height: u.rem(475);
+    min-height: u.rem(300); // 300px;
+    border-bottom: 5px solid var(--darkBlue);
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin: 0 auto u.rem(80);
+    top: 0;
+    border-bottom: u.rem(12) solid var(--primaryGreen);
+      
+
+    @media screen and (max-width: 639px) {
+      margin: 0 auto u.rem(40);
+    }
   }
   
 }

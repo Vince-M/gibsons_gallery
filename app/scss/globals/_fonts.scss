@@ -3,5 +3,48 @@
   --font-text: 'Lato', Helvetica, Arial, sans-serif; /* body font */
 }
 
-@font-face { font-family: 'Lato'; font-style: normal; font-weight: 400;  src: url( Lato-Regular.ttf) format( 'ttf' ); }
-@font-face { font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; src: url(RobotoSlab-Bold.ttf) format( 'ttf' ); }
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('./app/fonts/robotoslab-bold-webfont.woff2') format('woff2'),
+       url('./app/fonts/robotoslab-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./app/fonts/lato-regular-webfont.woff2') format('woff2'),
+       url('./app/fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./app/fonts/lato-bold-webfont.woff2') format('woff2'),
+       url('./app/fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./app/fonts/lato-black-webfont.woff2') format('woff2'),
+       url('./app/fonts/lato-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./app/fonts/lato-italic-webfont-woff2') format('woff2'),
+       url('./app/fonts/lato-italic-webfont-woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+// .lato-regular-italic {
+//   font-family: "Lato", sans-serif;
+//   font-weight: 400;
+//   font-style: italic;
+// }

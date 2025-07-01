@@ -125,7 +125,7 @@
   &__wrapper {
     // width: min(100% - u.rem(48), u.rem(800));
     margin-inline: auto;
-    padding: u.rem(32) 0 u.rem(24);
+    padding: 0;
     margin: 0;
 
     @include u.breakpoint-down(small) {
@@ -217,6 +217,7 @@
     img {
       border: 5px solid var(--darkBlue);
       display: block;
+      width: 100%;
       max-width: 100%;
       margin-bottom: 16px;
   
