@@ -6,9 +6,8 @@
 
 <?php get_header(); ?>
   
-  <main id="main" class="main" role="main">
 
-        <!-- HERO
+    <!-- HERO
     =================================================== -->
     <section class="index__hero" role="banner" data-type="background" data-speed="2">
 
@@ -23,17 +22,8 @@
     </section>
     <!-- ============================================== -->
 
-    
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <?php the_content(); ?>
 
-    <?php endwhile; else: ?>
-
-    <?php endif; ?>
-
-       
-
-  </main>
 
 <?php get_footer(); ?>

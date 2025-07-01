@@ -8,6 +8,12 @@ const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 
+// Copy fonts
+function fonts() {
+  return src(paths.fonts)
+    .pipe(dest(paths.dist + 'fonts'));
+}
+
 // Sass Task
 function scssTask() {
   return src("app/scss/*.scss", { sourcemaps: true})
@@ -18,7 +24,7 @@ function scssTask() {
 
 // Javascript Task
 function jsTask() {
-  return src("app/js/script.js", { sourcemaps: true})
+  return src("app/js/*.js", { sourcemaps: true})
   .pipe(babel({ presets: ["@babel/preset-env"] }))
   .pipe(terser())
   .pipe(dest("dist", { sourcemaps: "." }));

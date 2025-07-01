@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-
-
-
   
   <main id="main" class="main" role="main">
 
@@ -30,6 +27,5 @@
 
     <?php endif; ?>
 
-  </main>
 
 <?php get_footer(); ?>

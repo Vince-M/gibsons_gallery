@@ -1,12 +1,6 @@
 <?php get_header(); ?>
 
 
-
-  <!-- MAIN
-  =================================================== -->
-  <main id="main" class="main" role="main">
-
-
     <!-- HERO SECTION START -->
     <section class="indexHero">
       <div class="hero-img">
