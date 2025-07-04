@@ -1,0 +1,2 @@
+"use strict";console.log("Hi there");var appearOptions={threshold:1,rootMargin:"0px 0px 100px 0px"},appearOnScroll=new IntersectionObserver((function(e,r){e.forEach((function(e){e.isIntersecting&&(e.target.classList.add("appear"),r.unobserve(e.target))}))}),appearOptions);faders.forEach((function(e){appearOnScroll.observe(e)}));
+//# sourceMappingURL=intersection.js.map
