@@ -1,8 +1,7 @@
 <?php
 
 function gibsons_files() {
-  wp_enqueue_script('gibsons_js', get_stylesheet_directory_uri() . '/dist/script.js', array(), NULL, '1.0', true);
-  wp_enqueue_script('intersection', get_stylesheet_directory_uri() . '/dist/intersection.js', array(),  NULL, '1.0', false);
+  wp_enqueue_script('gibsons_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', true);
   wp_enqueue_script('bodyScrollLock', get_stylesheet_directory_uri() . '/dist/bodyScrollLock.min.js', array(), NULL, '1.0', true);
   wp_enqueue_style('gibsons_fonts', get_template_directory_uri() . get_theme_file_uri('main.css') );
   wp_enqueue_style( 'gibsons_main_style', get_theme_file_uri('main.css') );
@@ -45,4 +44,4 @@ function defer_parsing_of_js( $url ) {
   if ( strpos( $url, 'jquery.js' ) ) return $url;
   return str_replace( ' src', ' defer src', $url );
 }
-add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10, 3 );
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
