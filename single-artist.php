@@ -3,7 +3,7 @@
 
   <main id="main" class="main" role="main">
 
-        <!-- HERO
+    <!-- HERO
     =================================================== -->
     <section class="index__hero" role="banner" data-type="background" data-speed="2">
 
@@ -18,17 +18,18 @@
     </section>
     <!-- ============================================== -->
 
-    <!-- INTRO SECTION START -->
+    <!-- INTRO SECTION START
+    =================================================== -->
     <section class="wrapper intro__header">
         <article class="about__intro">
           <div class="about__col1">
             <h1 class="artist__head">Meet the <span class="meetArtist">Artist</span></h1>
             <h2 class="artistName"><?php echo esc_html( get_field('artist_name') ); ?></h2>
-<div class="artist__bio">
-              <?php the_field('artist_bio'); ?>
+              <div class="artist__bio">
+                <?php the_field('artist_bio'); ?>
               </div>
 
-              <div class="btn btn__workshop">
+              <div class="btn btn__artists">
                 <?php 
                   $button = get_field('artist_button')
                 ?>
@@ -51,7 +52,31 @@
           </div>
         </article>
     </section>
-    <!-- INTRO SECTION END -->
+    <!-- ============================================== -->
+
+
+    <!-- GALLERY SECTION START
+    =================================================== -->
+
+    <?php 
+      $images = get_field('gallery');
+    ?>
+
+    <section class="wrapper">
+<?php 
+$images = get_field('gallery');
+if( $images ): ?>
+
+        <?php foreach( $images as $image ):?>
+
+
+          <img src="<?php echo $image['sizes']['thumbnail'];?>">
+          
+        <?php endforeach; ?>
+
+<?php endif; ?>
+    </section>
+    <!-- ============================================== -->
 
   </main>
 

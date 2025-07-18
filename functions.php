@@ -31,6 +31,7 @@ add_action( 'init', 'gibson_theme_menus' );
 // THEME SUPPORT
 function gibsons_gallery_features() {
   add_theme_support( 'post-thumbnails');
+  add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'gibsons_gallery_features' );
 
